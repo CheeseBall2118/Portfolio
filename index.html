@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>徐嘉玲 / XU JIALING — AE Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1e9;--ink:#171717;--muted:#77756f;--acid:#c9ff32;--blue:#b7d8ff;--line:#171717;--card:#fffdf7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,"Noto Sans SC",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
+.cursor{position:fixed;z-index:20;width:18px;height:18px;border:1.5px solid #111;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:.12s ease}
+.progress{position:fixed;top:0;left:0;height:4px;background:var(--acid);width:0;z-index:30}
+nav{position:fixed;top:0;left:0;right:0;z-index:15;display:flex;justify-content:space-between;align-items:center;padding:20px 4vw;font-size:12px;letter-spacing:.04em;mix-blend-mode:multiply}
+nav .logo{font-weight:800}nav .links{display:flex;gap:25px}.pill{border:1px solid #111;border-radius:999px;padding:7px 12px;background:rgba(244,241,233,.75)}
+.hero{min-height:100vh;position:relative;padding:15vh 6vw 6vh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.055) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent 90%);pointer-events:none}
+.kicker{font-family:"DM Mono";font-size:12px}.hero h1{font-size:clamp(72px,14vw,210px);line-height:.78;letter-spacing:-.09em;margin:0;max-width:1100px;font-weight:800;position:relative}
+.hero h1 span{display:block}.hero h1 .outline{color:transparent;-webkit-text-stroke:1.5px #111}
+.hero-copy{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;position:relative}.hero-copy p{font-size:clamp(18px,2.1vw,30px);line-height:1.25;max-width:570px;margin:0}.hero-copy .scroll{font-family:"DM Mono";font-size:11px;animation:bob 1.6s infinite alternate}@keyframes bob{to{transform:translateY(8px)}}
+.sticker{position:absolute;right:10%;top:30%;width:125px;height:125px;background:var(--acid);border:1.5px solid #111;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:12px;transform:rotate(11deg);box-shadow:5px 5px 0 #111}
+.marquee{border-block:1.5px solid #111;overflow:hidden;white-space:nowrap;background:var(--acid);font-family:"DM Mono";font-size:13px;padding:11px 0}.marquee div{display:inline-block;animation:marq 22s linear infinite}@keyframes marq{to{transform:translateX(-50%)}}
+.section{padding:13vw 6vw}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;margin-bottom:70px}.section-no{font-family:"DM Mono";font-size:12px}.section-title{font-size:clamp(45px,7vw,105px);line-height:.88;letter-spacing:-.065em;margin:0;max-width:900px}.lead{font-size:18px;line-height:1.6;max-width:450px;margin:0;color:#4e4c48}
+.about{background:#111;color:#f4f1e9}.about .lead{color:#bbb}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw}.statement{font-size:clamp(30px,4vw,60px);line-height:1.1;letter-spacing:-.04em}.statement em{font-style:normal;color:var(--acid)}
+.timeline{border-top:1px solid #555}.time{display:grid;grid-template-columns:110px 1fr 80px;gap:25px;padding:24px 0;border-bottom:1px solid #444;align-items:start}.time .t{font-family:"DM Mono";font-size:11px;color:#aaa}.time h4{margin:0 0 8px;font-size:20px}.time p{margin:0;color:#aaa;line-height:1.55;font-size:14px}.time .arrow{text-align:right;font-size:20px}
+.method{background:var(--blue)}.flow{display:grid;grid-template-columns:repeat(6,1fr);border-top:1.5px solid #111;border-bottom:1.5px solid #111}.node{min-height:220px;padding:25px;border-right:1.5px solid #111;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}.node:last-child{border-right:0}.node:hover{background:var(--acid);transform:translateY(-8px)}.node b{font-size:34px}.node span{font-family:"DM Mono";font-size:10px}.node p{font-size:13px;line-height:1.5;margin:0}
+.works{padding-bottom:6vw}.work{border-top:1.5px solid #111;padding:45px 0;display:grid;grid-template-columns:100px 1fr 1fr;gap:35px;align-items:start}.work:last-child{border-bottom:1.5px solid #111}.work-num{font-family:"DM Mono";font-size:12px}.work-main h3{font-size:clamp(40px,5vw,72px);line-height:.9;letter-spacing:-.06em;margin:0 0 18px}.work-main .tag{font-family:"DM Mono";font-size:10px;border:1px solid #111;padding:6px 9px;border-radius:999px;display:inline-block}.work-main p{font-size:15px;line-height:1.6;max-width:520px}.work-side{display:flex;flex-direction:column;gap:25px}.metric{display:flex;align-items:flex-end;gap:12px}.metric strong{font-size:clamp(44px,6vw,85px);line-height:.8;letter-spacing:-.08em}.metric span{font-size:12px;line-height:1.2;max-width:100px}.details{display:none;margin-top:22px;padding:22px;background:var(--card);border:1px solid #111}.details.open{display:block}.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.details h4{font-size:12px;font-family:"DM Mono";margin:0 0 8px}.details p{font-size:13px;line-height:1.6;margin:0}.toggle{border:1px solid #111;background:none;border-radius:999px;padding:8px 13px;cursor:pointer;align-self:flex-start}.fake-img{height:180px;border:1px dashed #777;background:repeating-linear-gradient(135deg,#f5f2e9,#f5f2e9 10px,#e8e4d9 10px,#e8e4d9 11px);display:grid;place-items:center;font-family:"DM Mono";font-size:10px;color:#777}.archive{background:#d9d6cc}.archive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.archive-card{aspect-ratio:1/1;border:1.5px solid #111;padding:18px;background:var(--card);display:flex;flex-direction:column;justify-content:space-between;transition:.25s}.archive-card:hover{transform:rotate(-2deg) scale(1.02)}.archive-card .num{font-family:"DM Mono";font-size:10px}.archive-card strong{font-size:22px}.contact{min-height:80vh;display:flex;flex-direction:column;justify-content:space-between;background:#111;color:#f4f1e9}.contact h2{font-size:clamp(65px,13vw,190px);line-height:.78;letter-spacing:-.09em;margin:0}.contact .acid{color:var(--acid)}.contact-bottom{display:flex;justify-content:space-between;gap:30px;align-items:end}.contact-bottom p{max-width:500px;line-height:1.5;color:#bbb}.email{font-family:"DM Mono";font-size:14px;border-bottom:1px solid #f4f1e9;padding-bottom:5px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){nav .links{display:none}.hero{padding:16vh 6vw 8vh}.sticker{width:90px;height:90px;right:8%;top:42%;font-size:9px}.hero-copy{flex-direction:column;align-items:flex-start}.section{padding:22vw 6vw}.section-head{flex-direction:column;margin-bottom:45px}.about-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.node{min-height:180px;border-bottom:1.5px solid #111}.node:nth-child(2n){border-right:0}.work{grid-template-columns:45px 1fr;gap:15px}.work-side{grid-column:2}.details-grid{grid-template-columns:1fr}.archive-grid{grid-template-columns:1fr 1fr}.contact-bottom{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="progress"></div><div class="cursor"></div>
+<nav><a class="logo" href="#">XJ / AE</a><div class="links"><a href="#about">ABOUT</a><a href="#works">WORKS</a><a href="#archive">ARCHIVE</a><a class="pill" href="#contact">CONTACT ↗</a></div></nav>
+
+<section class="hero">
+<div class="hero-grid"></div>
+<div class="kicker">PORTFOLIO / 2026 / XU JIALING</div>
+<div>
+<h1><span>BRIEF</span><span class="outline">→ IDEA</span><span>→ LIVE.</span></h1>
+<div class="sticker">AE / 24<br>KEEP<br>THINGS<br>MOVING ↗</div>
+</div>
+<div class="hero-copy"><p>一个 Brief 要经过多少步，<br><b>才能变成有人讨论的东西？</b></p><div class="scroll">SCROLL TO ENTER ↓</div></div>
+</section>
+<div class="marquee"><div>STRATEGY　CONTENT　TALENT　SOCIAL　EXECUTION　RESULT　　/　　STRATEGY　CONTENT　TALENT　SOCIAL　EXECUTION　RESULT　　/　</div></div>
+
+<section class="section about" id="about">
+<div class="section-head reveal"><div class="section-no">01 / WHO AM I</div><h2 class="section-title">我不是把 Brief<br>做完的人。</h2></div>
+<div class="about-grid">
+<div class="statement reveal">我是那个会继续追问：<br>“<em>为什么年轻人要在乎？</em>”<br>然后把答案变成内容、话题和执行的人。</div>
+<div>
+<p class="lead reveal">徐嘉玲 / 24 / AE<br><br>擅长整合传播、品牌内容、艺人营销与社交传播。我的工作方式很简单：先把问题想清楚，再把所有需要动起来的人拉到同一条线上。</p>
+<div class="timeline reveal" style="margin-top:50px">
+<div class="time"><span class="t">09:37</span><div><h4>RECEIVE / 收到 Brief</h4><p>先确认真正的问题，而不是急着找答案。</p></div><span class="arrow">↗</span></div>
+<div class="time"><span class="t">11:48</span><div><h4>THINK / 找到切口</h4><p>从用户、艺人、品牌和平台之间找可以被讨论的连接。</p></div><span class="arrow">↗</span></div>
+<div class="time"><span class="t">14:26</span><div><h4>MAKE / 拉人执行</h4><p>客户、艺人、KOL、设计、制作——让事情真正发生。</p></div><span class="arrow">↗</span></div>
+<div class="time"><span class="t">23:51</span><div><h4>LIVE / 上线</h4><p>看数据，也看评论区里到底发生了什么。</p></div><span class="arrow">↗</span></div>
+</div></div></div>
+</section>
+
+<section class="section method" id="method">
+<div class="section-head reveal"><div class="section-no">02 / HOW I WORK</div><h2 class="section-title">把混乱变成<br>可以执行的东西。</h2></div>
+<div class="flow reveal">
+<div class="node"><span>01 / RECEIVE</span><b>Brief</b><p>听懂客户真正要解决的问题。</p></div>
+<div class="node"><span>02 / QUESTION</span><b>Why?</b><p>拆需求、找矛盾、定义传播任务。</p></div>
+<div class="node"><span>03 / INSIGHT</span><b>Hook</b><p>找到用户愿意参与的理由。</p></div>
+<div class="node"><span>04 / MAKE</span><b>Content</b><p>把策略变成可传播的内容。</p></div>
+<div class="node"><span>05 / PUSH</span><b>People</b><p>协调艺人、KOL、客户与供应商。</p></div>
+<div class="node"><span>06 / LIVE</span><b>Result</b><p>用数据验证，再复盘下一步。</p></div>
+</div>
+</section>
+
+<section class="section works" id="works">
+<div class="section-head reveal"><div class="section-no">03 / SELECTED WORK</div><h2 class="section-title">四个项目，<br>四种传播现场。</h2></div>
+
+<article class="work reveal">
+<div class="work-num">01<br>FANDOM</div>
+<div class="work-main"><span class="tag">INTEGRATED COMMUNICATION</span><h3>2025<br>SNH48</h3><p><b>问题：</b>头部艺人变动、粉圈热度走低。<br><b>我的判断：</b>与其继续追热度，不如制造粉丝愿意主动表达的理由。<br><b>我的行动：</b>围绕潜力成员竞争关系设计 UGC 切口，策划原生内容与讨论入口，并推进全周期传播执行。</p><button class="toggle" onclick="toggleDetails(this)">查看 Case ↗</button><div class="details"><div class="details-grid"><div><h4>MY MOVE</h4><p>竞争关系切口 → UGC铺贴 → 粉丝原生讨论 → 自传播扩散。</p></div><div><h4>RESULT</h4><p>对比2024同期：话题讨论量 +22%；粉丝原生UGC发帖量 +27%；全网曝光 40亿+，同比 +10%。</p></div></div></div></div>
+<div class="work-side"><div class="metric"><strong>+22%</strong><span>话题讨论量<br>同比提升</span></div><div class="metric"><strong>40亿+</strong><span>全网总曝光</span></div><div class="fake-img">DROP PROJECT VISUAL / images/project01</div></div>
+</article>
+
+<article class="work reveal">
+<div class="work-num">02<br>BRAND</div>
+<div class="work-main"><span class="tag">BRAND / INTERACTIVE</span><h3>得物<br>我的主场</h3><p><b>问题：</b>大型线下活动如何从“到场”转化为“参与”。<br><b>我的行动：</b>参与多场活动传播策划、内容创意与艺人对接；2026年独立策划 DWTI 人格测试，从题目设计、AI 内测页面到上线传播全流程推进。</p><button class="toggle" onclick="toggleDetails(this)">查看 Case ↗</button><div class="details"><div class="details-grid"><div><h4>MY MOVE</h4><p>把品牌年轻化从一句话变成可玩的互动机制，让用户主动完成测试并分享结果。</p></div><div><h4>RESULT</h4><p>系列活动单次传播体量 5亿+；DWTI 累计测试 6w+ 人次，完成率 63%。</p></div></div></div></div>
+<div class="work-side"><div class="metric"><strong>6w+</strong><span>测试人数</span></div><div class="metric"><strong>63%</strong><span>测试完成率</span></div><div class="fake-img">DROP PROJECT VISUAL / images/project02</div></div>
+</article>
+
+<article class="work reveal">
+<div class="work-num">03<br>TALENT × BRAND</div>
+<div class="work-main"><span class="tag">CONTENT / KOL</span><h3>SMFK ×<br>王玉雯</h3><p><b>我的行动：</b>提炼艺人特质与品牌调性，设计“艺人特质 + 品牌呈现”的传播切口；统筹前期策划、KOC/KOL投放、短视频策划、拍摄与落地。</p><button class="toggle" onclick="toggleDetails(this)">查看 Case ↗</button><div class="details"><div class="details-grid"><div><h4>CONTENT</h4><p>以艺人曝光带动品牌种草露出，串联小红书 KOC、抖音 KOL 与艺人内容。</p></div><div><h4>RESULT</h4><p>小红书KOC单篇点赞 5.5w+、浏览 246w+；抖音合作KOL点赞均破10w+；艺人短视频单条点赞 130w+；整体CPM 2.48元。</p></div></div></div></div>
+<div class="work-side"><div class="metric"><strong>130w+</strong><span>艺人短视频<br>单条点赞</span></div><div class="metric"><strong>¥2.48</strong><span>整体 CPM</span></div><div class="fake-img">DROP PROJECT VISUAL / images/project03</div></div>
+</article>
+
+<article class="work reveal">
+<div class="work-num">04<br>PUBLIC IMAGE</div>
+<div class="work-main"><span class="tag">TALENT MARKETING / PR</span><h3>演员请就位3<br>× 陈凯歌</h3><p><b>问题：</b>艺人在泛娱乐受众中存在“登味”既定印象。<br><b>我的行动：</b>参与节目整体形象呈现，通过舆情监测、单点内容预埋与话题引导，强化“直爽嘴替”人设，推动认知反转。</p><button class="toggle" onclick="toggleDetails(this)">查看 Case ↗</button><div class="details"><div class="details-grid"><div><h4>MY MOVE</h4><p>MONITOR → PRE-BURY → GUIDE → AMPLIFY，把节目内表达转化为可讨论的社交内容。</p></div><div><h4>RESULT</h4><p>相关单话题浏览量破千万。</p></div></div></div></div>
+<div class="work-side"><div class="metric"><strong>1000w+</strong><span>相关单话题<br>浏览量</span></div><div class="fake-img">DROP PROJECT VISUAL / images/project04</div></div>
+</article>
+</section>
+
+<section class="section archive" id="archive">
+<div class="section-head reveal"><div class="section-no">04 / ARCHIVE</div><h2 class="section-title">工作现场，<br>比结果更能说明问题。</h2><p class="lead">把真实项目中的 Brief、排期、内容草稿、评论区、现场照片放进来。敏感信息请打码。</p></div>
+<div class="archive-grid reveal">
+<div class="archive-card"><span class="num">ARCHIVE / 01</span><strong>BRIEF<br>截图</strong><span>“年轻一点”到底是什么意思？</span></div>
+<div class="archive-card"><span class="num">ARCHIVE / 02</span><strong>CONTENT<br>草稿</strong><span>从一个切口到一条内容。</span></div>
+<div class="archive-card"><span class="num">ARCHIVE / 03</span><strong>COMMENTS<br>评论区</strong><span>传播真正发生的地方。</span></div>
+<div class="archive-card"><span class="num">ARCHIVE / 04</span><strong>ON SITE<br>现场</strong><span>把计划变成现场。</span></div>
+<div class="archive-card"><span class="num">ARCHIVE / 05</span><strong>DATA<br>数据</strong><span>结果不是句号，是下一次判断。</span></div>
+<div class="archive-card"><span class="num">ARCHIVE / 06</span><strong>MESS<br>混乱</strong><span>AE 的日常，也值得被记录。</span></div>
+</div>
+</section>
+
+<section class="section contact" id="contact">
+<div><div class="section-no">05 / CONTACT</div><h2>LET'S<br><span class="acid">MAKE</span><br>THINGS.</h2></div>
+<div class="contact-bottom"><p>如果你正在找一个能把策略、内容、艺人和执行串起来的人，欢迎来聊。</p><div class="email">XU JIALING / AE<br>EMAIL: YOUR-EMAIL@EXAMPLE.COM</div></div>
+</section>
+<script>
+const cursor=document.querySelector('.cursor');document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;document.querySelector('.progress').style.width=(scrollY/h*100)+'%'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+function toggleDetails(btn){const d=btn.nextElementSibling;d.classList.toggle('open');btn.textContent=d.classList.contains('open')?'收起 Case ↑':'查看 Case ↗'}
+</script>
+</body></html>
