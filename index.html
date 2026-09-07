@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KEEP PUSHING — 徐嘉玲 / AE Portfolio</title>
+<style>
+:root{--paper:#f1ede5;--ink:#191817;--blue:#8fa6b7;--red:#b86f64;--stone:#918e86}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.mono{font-family:monospace}
+nav{position:fixed;top:0;left:0;right:0;height:64px;background:#f1ede5e8;backdrop-filter:blur(10px);border-bottom:1px solid #0002;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;z-index:20;font-size:12px}
+.navlinks{display:flex;gap:20px}.hero{min-height:100vh;padding:130px 7vw 60px;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero h1{font-size:clamp(72px,14vw,190px);line-height:.8;letter-spacing:-.08em;margin:30px 0}.accent{color:var(--red);font-style:italic}.sub{font-size:18px;line-height:1.8;max-width:650px}
+.rock{position:absolute;width:min(33vw,410px);height:min(33vw,410px);right:8vw;bottom:8vh;border:2px solid var(--ink);border-radius:48% 52% 44% 56%;background:var(--stone);display:grid;place-items:center;font-size:clamp(26px,4vw,50px);font-weight:900;transform:rotate(-8deg);box-shadow:12px 12px 0 var(--paper),13px 13px 0 var(--ink)}
+.walker{position:absolute;right:11vw;bottom:11vh;font-size:42px;z-index:3;animation:push 2s ease-in-out infinite}
+@keyframes push{50%{transform:translateX(-14px)}}
+section{padding:110px 7vw}.about{background:#e7e1d8;border-block:1px solid var(--ink)}.grid2{display:grid;grid-template-columns:1fr 1.2fr;gap:8vw}.kicker{font:12px monospace;letter-spacing:.1em}.about h2,.work h2,.archive h2{font-size:clamp(44px,7vw,90px);line-height:.95;letter-spacing:-.05em;margin:10px 0 0}.quote{font-size:clamp(26px,3.5vw,48px);line-height:1.35}.note{font-size:14px;line-height:2;color:#4f4b46}
+.timeline{border-left:1px solid var(--ink);padding-left:25px;margin-top:35px}.time{margin-bottom:28px}.time b{font:12px monospace}.time p{margin:6px 0;line-height:1.7}
+.workhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:50px}.case{border-top:1px solid var(--ink);padding:26px 0 50px;display:grid;grid-template-columns:80px 1fr 1.1fr;gap:24px}.case-title{font-size:clamp(34px,5vw,68px);line-height:.95;font-weight:900;letter-spacing:-.04em}.case-title small{display:block;font:11px monospace;margin-top:12px}.case-desc{font-size:14px;line-height:1.9}.metrics{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.metric{border:1px solid var(--ink);padding:10px 12px}.metric b{display:block;font-size:24px}.metric span{font:10px monospace}.case-visual{margin-top:18px;height:190px;border:1px dashed var(--ink);display:grid;place-items:center;overflow:hidden}.case-visual img{width:100%;height:100%;object-fit:cover}.placeholder{font:10px monospace;color:#777;text-align:center}
+.archive{background:var(--blue);border-top:1px solid var(--ink)}.archive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:45px}.slot{aspect-ratio:1/1;border:1px dashed var(--ink);display:grid;place-items:center;text-align:center;padding:20px;overflow:hidden;background:#ffffff1f}.slot img{width:100%;height:100%;object-fit:cover}.slot b{display:block;margin-bottom:6px}
+.contact{min-height:70vh;display:flex;flex-direction:column;justify-content:center}.contact h2{font-size:clamp(58px,11vw,150px);line-height:.8;letter-spacing:-.07em;margin:20px 0}.footer{border-top:1px solid var(--ink);padding:20px 7vw;display:flex;justify-content:space-between;font:11px monospace}
+@media(max-width:800px){.navlinks a:nth-child(-n+2){display:none}.rock{width:55vw;height:55vw;right:2vw;opacity:.45}.grid2,.case{grid-template-columns:1fr}.archive-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:21vw}}
+</style>
+</head>
+<body>
+<nav><a href="#top"><b>XU / AE</b></a><div class="navlinks mono"><a href="#about">ABOUT</a><a href="#work">CASES</a><a href="#archive">ARCHIVE</a><a href="#contact">CONTACT</a></div></nav>
+
+<section class="hero" id="top">
+<div class="kicker">徐嘉玲 / AE PORTFOLIO — V5</div>
+<h1>KEEP<br><span class="accent">PUSHING.</span></h1>
+<p class="sub">把一个模糊的 Brief，拆成可以执行的 IDEA；再把 IDEA 推到有人讨论、有人参与、最后留下结果的地方。</p>
+<div class="rock">BRIEF</div><div class="walker">🧍🏻</div>
+</section>
+
+<section class="about" id="about">
+<div class="grid2">
+<div><div class="kicker">01 / ABOUT ME</div><h2>事情到了我这里，<br>就往前走一点。</h2></div>
+<div>
+<p class="quote">“AE 不只是把事情做完。更重要的是，找到为什么要这样做。”</p>
+<p class="note">我是徐嘉玲，24岁，一名客户执行。擅长娱乐营销、品牌传播与整合传播项目，从 Brief 梳理、策略切口、内容创意到艺人 / 媒介 / 供应商协同，习惯把复杂的问题拆开，再一件件推进落地。</p>
+<div class="timeline">
+<div class="time"><b>STEP 01 / LISTEN</b><p>先把客户真正想解决的问题听明白。</p></div>
+<div class="time"><b>STEP 02 / FIND THE HOOK</b><p>从人、内容、平台和情绪里找到传播切口。</p></div>
+<div class="time"><b>STEP 03 / MAKE IT HAPPEN</b><p>拉齐资源、盯执行、解决临场问题，让 IDEA 上线。</p></div>
+<div class="time"><b>STEP 04 / DELIVER</b><p>最后用数据回答：这块石头，值不值得推。</p></div>
+</div></div></div>
+</section>
+
+<section class="work" id="work">
+<div class="workhead"><div><div class="kicker">02 / CASE FILES</div><h2>FOUR<br>ROCKS.</h2></div><div class="mono">BRIEF → IDEA → EXECUTION → RESULT</div></div>
+
+<article class="case"><div class="mono">001<br>2025</div><div class="case-title">SNH48<br>青春盛典<small>INTEGRATED COMMUNICATION / FANDOM</small></div><div class="case-desc"><b>问题：</b>头部艺人变动、粉圈热度走低。<br><br><b>我的行动：</b>独立负责全周期传播；预热阶段围绕潜力成员竞争关系设计 UGC 传播策略，激活粉丝原生内容与自发讨论。<div class="metrics"><div class="metric"><b>+22%</b><span>TOPIC DISCUSSION</span></div><div class="metric"><b>+27%</b><span>NATIVE UGC</span></div><div class="metric"><b>40亿+</b><span>EXPOSURE</span></div></div><div class="case-visual"><img src="images/project01-cover.jpg" onerror="this.style.display='none'"><div class="placeholder">替换 images/project01-cover.jpg</div></div></div></article>
+
+<article class="case"><div class="mono">002<br>2026</div><div class="case-title">得物<br>我的主场<small>BRAND COMMUNICATION / ENTERTAINMENT</small></div><div class="case-desc"><b>问题：</b>让大型线下活动不止“有声量”，还要让年轻用户愿意参与。<br><br><b>我的行动：</b>参与多场活动传播及艺人联动；独立策划 DWTI 人格测试，从题目设计、AI 内测页面到上线传播全流程推进。<div class="metrics"><div class="metric"><b>5亿+</b><span>SINGLE CAMPAIGN</span></div><div class="metric"><b>6W+</b><span>TEST USERS</span></div><div class="metric"><b>63%</b><span>COMPLETION</span></div></div><div class="case-visual"><img src="images/project02-cover.jpg" onerror="this.style.display='none'"><div class="placeholder">替换 images/project02-cover.jpg</div></div></div></article>
+
+<article class="case"><div class="mono">003<br>2026</div><div class="case-title">SMFK<br>× 王玉雯<small>TALENT × BRAND / CONTENT</small></div><div class="case-desc"><b>问题：</b>让艺人曝光成为品牌内容资产，而不是简单露出。<br><br><b>我的行动：</b>独立负责项目策划执行，提炼艺人特质与品牌调性，统筹投放、短视频策划及拍摄落地。<div class="metrics"><div class="metric"><b>130W+</b><span>ARTIST LIKES</span></div><div class="metric"><b>246W+</b><span>XHS VIEWS</span></div><div class="metric"><b>2.48元</b><span>CPM</span></div></div><div class="case-visual"><img src="images/project03-cover.jpg" onerror="this.style.display='none'"><div class="placeholder">替换 images/project03-cover.jpg</div></div></div></article>
+
+<article class="case"><div class="mono">004<br>2026</div><div class="case-title">演员请就位3<br>× 陈凯歌<small>TALENT MARKETING / PUBLIC IMAGE</small></div><div class="case-desc"><b>问题：</b>艺人在泛娱乐受众中存在“登味”的既定印象。<br><br><b>我的行动：</b>参与节目整体形象呈现，通过舆情监测、单点内容预埋与话题引导，强化“直爽嘴替”人设，推动形象反转。<div class="metrics"><div class="metric"><b>千万+</b><span>TOPIC VIEWS</span></div></div><div class="case-visual"><img src="images/project04-cover.jpg" onerror="this.style.display='none'"><div class="placeholder">替换 images/project04-cover.jpg</div></div></div></article>
+</section>
+
+<section class="archive" id="archive">
+<div class="kicker">03 / WORK ARCHIVE</div><h2>THE MESS<br>BEHIND THE RESULT.</h2>
+<p style="max-width:580px;line-height:1.8">这里留给 Brief、策略草稿、聊天记录、评论区、现场照片和数据截图——把“我是怎么做到的”留下来。</p>
+<div class="archive-grid">
+<div class="slot"><img src="images/archive-01.jpg" onerror="this.style.display='none'"><div><b>DROP BRIEF HERE</b><span class="mono">archive-01.jpg</span></div></div>
+<div class="slot"><img src="images/archive-02.jpg" onerror="this.style.display='none'"><div><b>DROP IDEA HERE</b><span class="mono">archive-02.jpg</span></div></div>
+<div class="slot"><img src="images/archive-03.jpg" onerror="this.style.display='none'"><div><b>DROP RESULT HERE</b><span class="mono">archive-03.jpg</span></div></div>
+<div class="slot"><img src="images/archive-04.jpg" onerror="this.style.display='none'"><div><b>FIELD NOTES</b><span class="mono">archive-04.jpg</span></div></div>
+<div class="slot"><img src="images/archive-05.jpg" onerror="this.style.display='none'"><div><b>COMMENTS</b><span class="mono">archive-05.jpg</span></div></div>
+<div class="slot"><img src="images/archive-06.jpg" onerror="this.style.display='none'"><div><b>V1 → V2 → FINAL</b><span class="mono">archive-06.jpg</span></div></div>
+</div>
+</section>
+
+<section class="contact" id="contact"><div class="kicker">04 / CONTACT</div><h2>LET'S<br>MOVE.</h2><p>如果你正在找一个能把 Brief 往前推的人，欢迎和我聊聊。</p><p class="mono">WECHAT / XXXXXXXX<br>EMAIL / XXXXXXXX@163.COM</p></section>
+<div class="footer"><span>徐嘉玲 / XU JIALING</span><span>KEEP PUSHING © 2026</span></div>
+</body>
+</html>
